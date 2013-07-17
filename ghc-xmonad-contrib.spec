@@ -1,12 +1,12 @@
 %define		pkgname	xmonad-contrib
 Summary:	Third party extensions for xmonad
 Name:		ghc-%{pkgname}
-Version:	0.11.1
-Release:	0.1
+Version:	0.11.2
+Release:	1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	20241f077ce796fae5c6e04123f1c911
+# Source0-md5:	415a7ed9449198b0e93d49ab0a4a0f72
 URL:		http://www.xmonad.org
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-extensible-exceptions
