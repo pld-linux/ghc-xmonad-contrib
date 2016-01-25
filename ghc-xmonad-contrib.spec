@@ -1,29 +1,28 @@
 %define		pkgname	xmonad-contrib
 Summary:	Third party extensions for xmonad
 Name:		ghc-%{pkgname}
-Version:	0.11.4
+Version:	0.12
 Release:	1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/package/%{pkgname}-%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	a41c886280a5414105c1cf241f0fd2f4
-Patch0:		applicative.patch
+# Source0-md5:	39345f462f069f2f0e4a488f7e435dbb
 URL:		http://www.xmonad.org
 BuildRequires:	ghc >= 6.12.3
-BuildRequires:	ghc-X11 >= 1.6
+BuildRequires:	ghc-X11 >= 1.6.1
 BuildRequires:	ghc-extensible-exceptions
 BuildRequires:	ghc-mtl
 BuildRequires:	ghc-random
 BuildRequires:	ghc-utf8-string
 BuildRequires:	rpmbuild(macros) >= 1.608
-BuildRequires:	xmonad >= 0.11
+BuildRequires:	xmonad >= 0.12
 %requires_eq	ghc
-Requires:	ghc-X11 >= 1.6
+Requires:	ghc-X11 >= 1.6.1
 Requires:	ghc-extensible-exceptions
 Requires:	ghc-mtl
 Requires:	ghc-random
 Requires:	ghc-utf8-string
-Requires:	xmonad >= 0.11
+Requires:	xmonad >= 0.12
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # debuginfo is not useful for ghc
@@ -45,7 +44,6 @@ Dokumentacja w formacie HTML dla %{pkgname}.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
-%patch0 -p1
 
 %build
 runhaskell Setup.lhs configure -v2 \
