@@ -2,7 +2,7 @@
 Summary:	Third party extensions for xmonad
 Name:		ghc-%{pkgname}
 Version:	0.12
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/package/%{pkgname}-%{version}/%{pkgname}-%{version}.tar.gz
