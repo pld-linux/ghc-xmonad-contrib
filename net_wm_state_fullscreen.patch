@@ -1,0 +1,10 @@
+--- XMonad/Hooks/EwmhDesktops.hs.orig	2016-08-18 22:08:02.386854722 +0200
++++ XMonad/Hooks/EwmhDesktops.hs	2016-08-18 22:08:39.046646443 +0200
+@@ -243,6 +243,7 @@
+     c <- getAtom "ATOM"
+     supp <- mapM getAtom ["_NET_WM_STATE_HIDDEN"
+                          ,"_NET_NUMBER_OF_DESKTOPS"
++                         ,"_NET_WM_STATE_FULLSCREEN"
+                          ,"_NET_CLIENT_LIST"
+                          ,"_NET_CLIENT_LIST_STACKING"
+                          ,"_NET_CURRENT_DESKTOP"

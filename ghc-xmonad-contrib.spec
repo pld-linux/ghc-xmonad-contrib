@@ -7,6 +7,7 @@ License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/package/%{pkgname}-%{version}/%{pkgname}-%{version}.tar.gz
 # Source0-md5:	39345f462f069f2f0e4a488f7e435dbb
+Patch0:		net_wm_state_fullscreen.patch
 URL:		http://www.xmonad.org
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-X11 >= 1.6.1
@@ -44,6 +45,7 @@ Dokumentacja w formacie HTML dla %{pkgname}.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
+%patch0 -p0
 
 %build
 runhaskell Setup.lhs configure -v2 \
